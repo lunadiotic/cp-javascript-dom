@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Selecting</title>
+		<link rel="stylesheet" href="app.css" />
+	</head>
+
+	<body>
+		<h1>Cat</h1>
+		<img
+			id="banner"
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1920px-Cat_August_2010-4.jpg"
+			alt=""
+		/>
+		<p>
+			The <b>cat</b> (<i><b>Felis catus</b></i
+			>) is a
+			<a href="/wiki/Domestication_of_the_cat" title="Domestication of the cat"
+				>domestic</a
+			>
+			<a href="/wiki/Species" title="Species">species</a> of small
+			<a href="/wiki/Carnivorous" class="mw-redirect" title="Carnivorous"
+				>carnivorous</a
+			>
+			<a href="/wiki/Mammal" title="Mammal">mammal</a>.<sup
+				id="cite_ref-Linnaeus1758_1-1"
+				class="reference"
+				><a href="#cite_note-Linnaeus1758-1">[1]</a></sup
+			><sup id="cite_ref-MSW3fc_2-1" class="reference"
+				><a href="#cite_note-MSW3fc-2">[2]</a></sup
+			>
+			It is the only domesticated species in the family
+			<a href="/wiki/Felidae" title="Felidae">Felidae</a> and is commonly
+			referred to as the <b>domestic cat</b> or <b>house cat</b> to distinguish
+			it from the wild members of the family.<sup
+				id="cite_ref-Clutton-Brock1999_4-0"
+				class="reference"
+				><a href="#cite_note-Clutton-Brock1999-4">[4]</a></sup
+			>
+			Cats are commonly kept as house pets but can also be
+			<a href="/wiki/Farm_cat" title="Farm cat">farm cats</a> or
+			<a href="/wiki/Feral_cat" title="Feral cat">feral cats</a>; the feral cat
+			ranges freely and avoids human contact.<sup
+				id="cite_ref-Liberg_al2014_5-0"
+				class="reference"
+				><a href="#cite_note-Liberg_al2014-5">[5]</a></sup
+			>
+			Domestic cats are valued by humans for companionship and their ability to
+			kill <a href="/wiki/Rodent" title="Rodent">rodents</a>. About 60
+			<a href="/wiki/Cat_breeds" class="mw-redirect" title="Cat breeds"
+				>cat breeds</a
+			>
+			are recognized by various
+			<a href="/wiki/Cat_registries" class="mw-redirect" title="Cat registries"
+				>cat registries</a
+			>.<sup id="cite_ref-Driscoll_al2009_6-0" class="reference"
+				><a href="#cite_note-Driscoll_al2009-6">[6]</a></sup
+			>
+		</p>
+
+		<div id="toc" role="navigation" aria-labelledby="mw-toc-heading">
+			<input
+				type="checkbox"
+				role="button"
+				id="toctogglecheckbox"
+				class="toctogglecheckbox"
+				style="display: none"
+			/>
+			<div class="toctitle" lang="en" dir="ltr">
+				<h2 id="mw-toc-heading">Contents</h2>
+				<span class="toctogglespan"
+					><label class="toctogglelabel" for="toctogglecheckbox"></label
+				></span>
+			</div>
+			<ul>
+				<li class="toclevel-1 tocsection-1">
+					<a href="#Etymology_and_naming"
+						><span class="tocnumber">1</span>
+						<span class="toctext">Etymology and naming</span></a
+					>
+				</li>
+				<li class="toclevel-1 tocsection-2">
+					<a href="#Taxonomy"
+						><span class="tocnumber">2</span>
+						<span class="toctext">Taxonomy</span></a
+					>
+				</li>
+				<li class="toclevel-1 tocsection-3">
+					<a href="#Evolution"
+						><span class="tocnumber">3</span>
+						<span class="toctext">Evolution</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-4">
+							<a href="#Domestication"
+								><span class="tocnumber">3.1</span>
+								<span class="toctext">Domestication</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-5">
+					<a href="#Characteristics"
+						><span class="tocnumber">4</span>
+						<span class="toctext">Characteristics</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-6">
+							<a href="#Size"
+								><span class="tocnumber">4.1</span>
+								<span class="toctext">Size</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-7">
+							<a href="#Skeleton"
+								><span class="tocnumber">4.2</span>
+								<span class="toctext">Skeleton</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-8">
+							<a href="#Skull"
+								><span class="tocnumber">4.3</span>
+								<span class="toctext">Skull</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-9">
+							<a href="#Claws"
+								><span class="tocnumber">4.4</span>
+								<span class="toctext">Claws</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-10">
+							<a href="#Ambulation"
+								><span class="tocnumber">4.5</span>
+								<span class="toctext">Ambulation</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-11">
+							<a href="#Balance"
+								><span class="tocnumber">4.6</span>
+								<span class="toctext">Balance</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-12">
+							<a href="#Coats"
+								><span class="tocnumber">4.7</span>
+								<span class="toctext">Coats</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-13">
+					<a href="#Senses"
+						><span class="tocnumber">5</span>
+						<span class="toctext">Senses</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-14">
+							<a href="#Vision"
+								><span class="tocnumber">5.1</span>
+								<span class="toctext">Vision</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-15">
+							<a href="#Hearing"
+								><span class="tocnumber">5.2</span>
+								<span class="toctext">Hearing</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-16">
+							<a href="#Smell"
+								><span class="tocnumber">5.3</span>
+								<span class="toctext">Smell</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-17">
+							<a href="#Taste"
+								><span class="tocnumber">5.4</span>
+								<span class="toctext">Taste</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-18">
+							<a href="#Whiskers"
+								><span class="tocnumber">5.5</span>
+								<span class="toctext">Whiskers</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-19">
+					<a href="#Behavior"
+						><span class="tocnumber">6</span>
+						<span class="toctext">Behavior</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-20">
+							<a href="#Sociability"
+								><span class="tocnumber">6.1</span>
+								<span class="toctext">Sociability</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-21">
+							<a href="#Communication"
+								><span class="tocnumber">6.2</span>
+								<span class="toctext">Communication</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-22">
+							<a href="#Grooming"
+								><span class="tocnumber">6.3</span>
+								<span class="toctext">Grooming</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-23">
+							<a href="#Fighting"
+								><span class="tocnumber">6.4</span>
+								<span class="toctext">Fighting</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-24">
+							<a href="#Hunting_and_feeding"
+								><span class="tocnumber">6.5</span>
+								<span class="toctext">Hunting and feeding</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-25">
+							<a href="#Play"
+								><span class="tocnumber">6.6</span>
+								<span class="toctext">Play</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-26">
+							<a href="#Reproduction"
+								><span class="tocnumber">6.7</span>
+								<span class="toctext">Reproduction</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-27">
+					<a href="#Lifespan_and_health"
+						><span class="tocnumber">7</span>
+						<span class="toctext">Lifespan and health</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-28">
+							<a href="#Disease"
+								><span class="tocnumber">7.1</span>
+								<span class="toctext">Disease</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-29">
+					<a href="#Ecology"
+						><span class="tocnumber">8</span>
+						<span class="toctext">Ecology</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-30">
+							<a href="#Habitats"
+								><span class="tocnumber">8.1</span>
+								<span class="toctext">Habitats</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-31">
+							<a href="#Ferality"
+								><span class="tocnumber">8.2</span>
+								<span class="toctext">Ferality</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-32">
+							<a href="#Impact_on_wildlife"
+								><span class="tocnumber">8.3</span>
+								<span class="toctext">Impact on wildlife</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-33">
+					<a href="#Interaction_with_humans"
+						><span class="tocnumber">9</span>
+						<span class="toctext">Interaction with humans</span></a
+					>
+					<ul>
+						<li class="toclevel-2 tocsection-34">
+							<a href="#Shows"
+								><span class="tocnumber">9.1</span>
+								<span class="toctext">Shows</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-35">
+							<a href="#Infection"
+								><span class="tocnumber">9.2</span>
+								<span class="toctext">Infection</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-36">
+							<a href="#History_and_mythology"
+								><span class="tocnumber">9.3</span>
+								<span class="toctext">History and mythology</span></a
+							>
+						</li>
+						<li class="toclevel-2 tocsection-37">
+							<a href="#Superstitions_and_rituals"
+								><span class="tocnumber">9.4</span>
+								<span class="toctext">Superstitions and rituals</span></a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="toclevel-1 tocsection-38">
+					<a href="#Gallery"
+						><span class="tocnumber">10</span>
+						<span class="toctext">Gallery</span></a
+					>
+				</li>
+				<li class="toclevel-1 tocsection-39">
+					<a href="#See_also"
+						><span class="tocnumber">11</span>
+						<span class="toctext">See also</span></a
+					>
+				</li>
+				<li class="toclevel-1 tocsection-40">
+					<a href="#References"
+						><span class="tocnumber">12</span>
+						<span class="toctext">References</span></a
+					>
+				</li>
+				<li class="toclevel-1 tocsection-41">
+					<a href="#External_links"
+						><span class="tocnumber">13</span>
+						<span class="toctext">External links</span></a
+					>
+				</li>
+			</ul>
+		</div>
+
+		<h2>
+			<span class="mw-headline" id="Etymology_and_naming"
+				>Etymology and naming</span
+			>
+		</h2>
+		<p>
+			The origin of the English word <i>cat</i>,
+			<a href="/wiki/Old_English" title="Old English">Old English</a>
+			<span title="Old English (ca. 450-1100)-language text"
+				><i lang="ang">catt</i></span
+			>, is thought to be the
+			<a href="/wiki/Late_Latin" title="Late Latin">Late Latin</a> word
+			<span title="Latin-language text"><i lang="la">cattus</i></span
+			>, which was first used at the beginning of the 6th century.<sup
+				id="cite_ref-21"
+				class="reference"
+				><a href="#cite_note-21">[21]</a></sup
+			>
+			It was suggested that
+			<span title="Latin-language text"><i lang="la">cattus</i></span> is
+			derived from an
+			<a href="/wiki/Egyptian_language" title="Egyptian language">Egyptian</a>
+			precursor of
+			<a href="/wiki/Coptic_language" title="Coptic language">Coptic</a>
+			<span title="Coptic-language text"
+				><span lang="cop"
+					><a
+						href="https://en.wiktionary.org/wiki/%CF%A3%E2%B2%81%E2%B2%A9"
+						class="extiw"
+						title="wikt:ϣⲁⲩ"
+						>ϣⲁⲩ</a
+					></span
+				></span
+			>
+			<span title="Coptic-language text"><i lang="cop-Latn">šau</i></span
+			>, "tomcat", or its feminine form suffixed with
+			<span title="Ancient Egyptian-language text"
+				><i lang="egy-Latn">-t</i></span
+			>.<sup id="cite_ref-22" class="reference"
+				><a href="#cite_note-22">[22]</a></sup
+			>
+			The Late Latin word may be derived from another
+			<a href="/wiki/Afro-Asiatic" class="mw-redirect" title="Afro-Asiatic"
+				>Afro-Asiatic</a
+			><sup id="cite_ref-23" class="reference"
+				><a href="#cite_note-23">[23]</a></sup
+			>
+			or
+			<a href="/wiki/Nilo-Saharan" class="mw-redirect" title="Nilo-Saharan"
+				>Nilo-Saharan</a
+			>
+			language. The
+			<a href="/wiki/Nubian_languages" title="Nubian languages">Nubian</a> word
+			<span title="Nubian languages collective text"
+				><i lang="nub">kaddîska</i></span
+			>
+			"wildcat" and
+			<a href="/wiki/Nobiin_language" title="Nobiin language">Nobiin</a>
+			<span title="Nubian languages collective text"
+				><i lang="nub">kadīs</i></span
+			>
+			are possible sources or cognates.<sup id="cite_ref-24" class="reference"
+				><a href="#cite_note-24">[24]</a></sup
+			>
+			The Nubian word may be a loan from
+			<a
+				href="/wiki/Arabic_language"
+				class="mw-redirect"
+				title="Arabic language"
+				>Arabic</a
+			>
+			<span title="Arabic-language text"
+				><span lang="ar" dir="rtl">قَطّ‎</span></span
+			>
+			<span title="Arabic-language text"><i lang="ar-Latn">qaṭṭ</i></span> ~
+			<span title="Arabic-language text"
+				><span lang="ar" dir="rtl">قِطّ</span></span
+			>
+			<span title="Arabic-language text"><i lang="ar-Latn">qiṭṭ</i></span
+			>.
+		</p>
+
+		<img
+			class="square"
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg/800px-Orange_tabby_cat_sitting_on_fallen_leaves-Hisashi-01A.jpg"
+			alt=""
+		/>
+		<img
+			class="square"
+			src="https://upload.wikimedia.org/wikipedia/commons/2/25/Siam_lilacpoint.jpg"
+			alt=""
+		/>
+		<img
+			class="square"
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Felis_catus-cat_on_snow.jpg/1920px-Felis_catus-cat_on_snow.jpg"
+			alt=""
+		/>
+
+		<script src="app.js"></script>
+	</body>
+</html>
