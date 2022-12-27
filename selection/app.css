@@ -26,3 +26,15 @@ img.square {
 .tocnumber {
 	color: black;
 }
+
+.bg-info {
+	background-color: #17a2b8;
+}
+
+.text-white {
+	color: white;
+}
+
+.border-danger {
+	border: 3px rgb(148, 26, 37) solid;
+}
